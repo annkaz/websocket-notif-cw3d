@@ -4,9 +4,9 @@ The Real-time Toast Notification component is meant to be added to your dapp to 
 
 ## Step by step tutorial on how to implement Real-Time Toast Notifications in your dapp
 
-Step 1. In your terminal run the following command:`npx create-web3-dapp@latest`
+#### Step 1. In your terminal run the following command:`npx create-web3-dapp@latest`
 
-Step 2. Create files
+#### Step 2. Create files
 
 For real-time Notification Toast Component:
 
@@ -27,7 +27,7 @@ For real-time Notification Toast Component using react-tostify:
 1.  In /components create transactionsNotification.jsx
 1.  Copy the corresponding code from this repo into each of the created files above.
 
-Step 4: Implement
+#### Step 3: Implement
 
 For real-time Notification Toast Component:
 
@@ -44,21 +44,24 @@ For real-time Notification Toast Component using react-tostify:
 1.  Import the `TransactionNotification` component at the top `import TransactionNotification from "../components/TransactionNotification"` of a page or component
 2.  Add the `TransactionNotification` component to the return statement and pass in the props as parameters: `return <TransactionNotification walletAddress={walletOrCollectionAddress} chain={chain} />`
 
+#### Step 4. Protect your API Keys
+
+To avoid unintended use of the API Key, you can setup an allowlist within your Alchemy dashboard, specifying what domains, contract addresses, wallet addresses, or IP addresses are able to send requests.
+
 ### Setup and installation
 
 1. Install all the necessary dependencies in the project directory:
 
 ```
-  npm install
+npm install
 ```
 
 2. Update environmental variables at .env.local in the project root folder:
 
-   ```
-    ALCHEMY_API_KEY=your-api-key
-    NEXT_PUBLIC_WC_PROJECT_ID=your-wallet-connect-projectId
-
-   ```
+```
+ALCHEMY_API_KEY=your-api-key
+NEXT_PUBLIC_WC_PROJECT_ID=your-wallet-connect-projectId
+```
 
 ### Running the Project
 
