@@ -1,0 +1,40 @@
+.toast_container {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 100px;
+  padding: 10px 20px;
+  margin: 10px 20px 20px 20px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.toasts_container {
+  z-index: 9999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+
+.content_style {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.close_button {
+  position: absolute;
+  top: 7px;
+  right: 9px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 16px;
+  color: #666;
+}
