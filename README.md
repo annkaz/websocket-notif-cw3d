@@ -46,7 +46,7 @@ For real-time Notification Toast Component using react-tostify:
 
 #### Step 4. Protect your API Keys
 
-To avoid unintended use of the API Key, you can setup an allowlist within your Alchemy dashboard, specifying what domains, contract addresses, wallet addresses, or IP addresses are able to send requests.
+To avoid unintended use of the API Key, you can setup an allowlist within your Alchemy dashboard, specifying what domains, contract addresses, wallet addresses, or IP addresses are able to send requests. [`Learn more`](https://docs.alchemy.com/docs/best-practices-when-using-alchemy#7-protecting-your-api-keys)
 
 ### Setup and installation
 

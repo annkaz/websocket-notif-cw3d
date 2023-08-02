@@ -39,7 +39,7 @@ export default function ToastNotification({ walletAddress, chain }) {
 
   const [toasts, setToasts] = useState([]);
 
-  // Create a ref to hold the current toasts state;
+  // Create a ref to hold the latest toasts state to avoid stale state in some cases
   const toastsRef = useRef(toasts);
 
   // Update the ref whenever toasts changes

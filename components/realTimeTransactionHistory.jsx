@@ -106,7 +106,7 @@ export default function RealTimeTransactionHistory({ walletAddress, chain }) {
     if (address?.length && isConnected) setMyAddress(address);
   }, [address]);
 
-  // This hook is used to esteblish WebSocket subscriptions using the Alchemy API to receive real-time updates about events on the blockchain
+  // This hook is used to esteblish WebSocket subscriptions using Alchemy's Subscription API to receive real-time updates about events on the blockchain
   useEffect(() => {
     const settings = {
       apiKey: process.env.ALCHEMY_API_KEY,
