@@ -8,7 +8,7 @@ The Real-time Toast Notification component is meant to be added to your dapp to 
 
 #### Step 2. Create files
 
-For real-time Notification Toast Component:
+For real-time Toast Notification Component:
 
 1.  In /components create toastNotification.jsx
 2.  In /styles create ToastNotification.module.css
@@ -21,7 +21,7 @@ For real-time Transactions History Display:
 3.  In /pages/api create getTransaction.js
 4.  Copy the corresponding code from this repo into each of the created files above.
 
-For real-time Notification Toast Component using react-tostify:
+For real-time Toast Notification Component using react-tostify:
 
 1.  Install react-tostify npm package by running `npm i react-toastify`
 1.  In /components create transactionsNotification.jsx
