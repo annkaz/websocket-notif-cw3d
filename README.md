@@ -10,22 +10,25 @@ The Real-time Toast Notification component is meant to be added to your dapp to 
 
 For real-time Toast Notification Component:
 
-1.  In /components create toastNotification.jsx
-2.  In /styles create ToastNotification.module.css
-3.  Copy the corresponding code from this repo into each of the created files above.
+1.  Create a new environment variable in your .env.local file named NEXT_PUBLIC_ALCHEMY_API_KEY and assign your Alchemy API key as its value. This will make the key available to the frontend code in the Next.js application.
+2.  In /components create toastNotification.jsx
+3.  In /styles create ToastNotification.module.css
+4.  Copy the corresponding code from this repo into each of the created files above.
 
 For real-time Transactions History Display:
 
-1.  In /components create realTimeTransactionHistory.jsx
-2.  In /styles create RealTimeTransactionHistory.module.css
-3.  In /pages/api create getTransaction.js
-4.  Copy the corresponding code from this repo into each of the created files above.
+1.  Create a new environment variable in your .env.local file named NEXT_PUBLIC_ALCHEMY_API_KEY and assign your Alchemy API key as its value. This will make the key available to the frontend code in the Next.js application.
+2.  In /components create realTimeTransactionHistory.jsx
+3.  In /styles create RealTimeTransactionHistory.module.css
+4.  In /pages/api create getTransaction.js
+5.  Copy the corresponding code from this repo into each of the created files above.
 
 For real-time Toast Notification Component using react-tostify:
 
-1.  Install react-tostify npm package by running `npm i react-toastify`
-1.  In /components create transactionsNotification.jsx
-1.  Copy the corresponding code from this repo into each of the created files above.
+1.  Create a new environment variable in your .env.local file named NEXT_PUBLIC_ALCHEMY_API_KEY and assign your Alchemy API key as its value. This will make the key available to the frontend code in the Next.js application.
+2.  Install react-tostify npm package by running `npm i react-toastify`
+3.  In /components create transactionsNotification.jsx
+4.  Copy the corresponding code from this repo into each of the created files above.
 
 #### Step 3: Implement
 
