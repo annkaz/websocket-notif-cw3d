@@ -73,3 +73,17 @@ NEXT_PUBLIC_WC_PROJECT_ID=your-wallet-connect-projectId
    npm run dev
    ```
 2. Open your browser and navigate to [`http://localhost:3000/`](http://localhost:3000/) to view the dApp in action.
+
+### Future Improvements: Secure WebSocket Handling and API Key Protection
+
+Alchemy offers built-in protections, like an allowlist, to secure API keys used in frontend-only applications. However, for even more security, you might consider an alternative approach that keeps sensitive API keys server-side.
+
+Our current setup involves the client-side component communicating directly with Alchemy via the WebSockets API, which requires the API key on the client-side. A more secure method involves setting up a bridge server:
+
+1. Set up an API endpoint on your server that initiates a WebSocket connection to Alchemy. This keeps the API key on the server-side.
+
+2. Make this endpoint listen for Alchemy events and push necessary data to your client-side app when these events occur.
+
+3. In your client-side app (e.g., the Toast Notification Component), set up a WebSocket connection to your new server-side endpoint.
+
+This approach keeps API keys on the server-side and only involves client-server communications, not direct connections to Alchemy. Although more complex and requiring careful WebSocket management, it provides an additional security layer by minimizing the exposure of sensitive keys
