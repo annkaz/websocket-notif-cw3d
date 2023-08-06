@@ -9,18 +9,27 @@ const getTransactionData = async (
   blockNumber,
   chain
 ) => {
-  const transaction = await fetch("/api/getTransaction", {
-    method: "POST",
-    body: JSON.stringify({
-      fromAddress,
-      toAddress, // Replace with the smart contract address of the NFTs collection you're looking for
-      chain: chain ? chain : "ETH_MAINNET",
-      blockNumber,
-    }),
-  });
-  const res = await transaction.json();
+  try {
+    const transaction = await fetch("/api/getTransaction", {
+      method: "POST",
+      body: JSON.stringify({
+        fromAddress,
+        toAddress,
+        chain: chain ? chain : "ETH_MAINNET",
+        blockNumber,
+      }),
+    });
 
-  return (res && res.transfers && res.transfers[0]) ?? [];
+    if (!transaction.ok) {
+      throw new Error(`HTTP error! status: ${transaction.status}`);
+    }
+
+    const res = await transaction.json();
+    return (res && res.transfers && res.transfers[0]) ?? [];
+  } catch (e) {
+    console.error(e);
+    return null;
+  }
 };
 
 export default function RealTimeTransactionHistory({ walletAddress, chain }) {
@@ -35,6 +44,7 @@ export default function RealTimeTransactionHistory({ walletAddress, chain }) {
 
   let orderedTransactions = Object.values(transactions).reverse();
 
+  // Callback function for handling pending transactions
   const pendingCb = (tx) => {
     let newTransactions = { ...transactionsRef.current };
     if (newTransactions[tx.nonce]) {
@@ -57,6 +67,7 @@ export default function RealTimeTransactionHistory({ walletAddress, chain }) {
     transactionsRef.current = newTransactions; // Update the reference
   };
 
+  // Callback function for handling mined transactions
   const minedCb = async (tx) => {
     let { transaction } = tx;
     let { blockNumber, from, to, nonce } = transaction;
