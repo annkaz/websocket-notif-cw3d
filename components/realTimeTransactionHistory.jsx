@@ -120,7 +120,7 @@ export default function RealTimeTransactionHistory({ walletAddress, chain }) {
   // This hook is used to esteblish WebSocket subscriptions using Alchemy's Subscription API to receive real-time updates about events on the blockchain
   useEffect(() => {
     const settings = {
-      apiKey: process.env.ALCHEMY_API_KEY,
+      apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
       network: Network[chain],
     };
 
